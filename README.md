@@ -23,7 +23,7 @@ Système de connexion pour Edubel.
 
 ## TODOS
 
-- [x] Front-End
+- [ ] ### Front-End
 
     - [ ] Create react app
     - [ ] Create user class
@@ -68,6 +68,6 @@ Système de connexion pour Edubel.
       - email : string
       - password : string
       - admin : bool
-      -- Methods :
+      - Methods :
         - before save hash password with jwt
         - compare password
