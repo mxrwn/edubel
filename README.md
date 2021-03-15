@@ -44,8 +44,8 @@ Système de connexion pour Edubel.
         * [ ] Save token as cookie
         * [ ] Send user to profile
     * [x] Login component
-      * [ ] Create form (email, password)
-      * [ ] Get user input from submit event
+      * [x] Create form (email, password)
+      * [x] Get user input from submit event
       * [ ] send data to backend
       * [ ] Wait for token
         * [ ] Error if input does not match
