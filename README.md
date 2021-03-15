@@ -25,7 +25,7 @@ Système de connexion pour Edubel.
 
 ## Front-End
 
-    - [x] Create react app
+     [x] Create react app
     - [ ] Create user class
       - email
       - password
