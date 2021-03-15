@@ -23,7 +23,7 @@ Système de connexion pour Edubel.
 
 ## TODOS
 
-### Front-End
+## Front-End
 
     - [x] Create react app
     - [ ] Create user class
@@ -57,7 +57,7 @@ Système de connexion pour Edubel.
       - [ ] Get user info
       - [ ] Show it
 
-### Back-End
+## Back-End
 
     - [ ] Create express app
     - [ ] Create user route
