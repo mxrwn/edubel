@@ -25,7 +25,7 @@ Système de connexion pour Edubel.
 
 ## Front-End
 
-    * [x] Create react app
+* [x] Create react app
     * [ ] Create user class
       - email
       - password
@@ -59,7 +59,7 @@ Système de connexion pour Edubel.
 
 ## Back-End
 
-    * [ ] Create express app
+* [ ] Create express app
     * [ ] Create user route
       * [ ] post request - check user with token
       * [ ] /register - save user to db and send token
