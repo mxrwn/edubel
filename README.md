@@ -59,21 +59,12 @@ Système de connexion pour Edubel.
 
 ## Back-End
 
-<<<<<<< HEAD
     - [x] Create express app
     - [x] Create user route
       - [ ] post request - check user with token
       - [ ] /register - save user to db and send token
       - [ ] /login - check user and send token
     - [ ] Create user model
-=======
-* [ ] Create express app
-    * [ ] Create user route
-      * [ ] post request - check user with token
-      * [ ] /register - save user to db and send token
-      * [ ] /login - check user and send token
-    * [ ] Create user model
->>>>>>> bc4928f4fd2f2331bf20e5289fee48f3da996075
       - email : string
       - password : string
       - admin : bool

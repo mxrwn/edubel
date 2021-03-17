@@ -1,5 +1,5 @@
 const express = require('express');
-const jwt = require('jsonwebtoken');
+const cors = require('cors');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 
@@ -16,7 +16,9 @@ mongoose.connect('mongodb://localhost:27017/edubel', {
 app.use(express.json());
 app.use(morgan('common'));
 
-
+// app.use(cors({
+//   origin: 'http://www.edubel.be'
+// }))
 
 
 app.get('/', (req, res) => {
