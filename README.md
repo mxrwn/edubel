@@ -44,8 +44,8 @@ Système de connexion pour Edubel.
         - [ ] Save token as cookie
         - [ ] Send user to profile
     - [x] Login component
-      - [ ] Create form (email, password)
-      - [ ] Get user input from submit event
+      - [x] Create form (email, password)
+      - [x] Get user input from submit event
       - [ ] send data to backend
       - [ ] Wait for token
         - [ ] Error if input does not match
@@ -59,8 +59,8 @@ Système de connexion pour Edubel.
 
 ### Back-End
 
-    - [ ] Create express app
-    - [ ] Create user route
+    - [x] Create express app
+    - [x] Create user route
       - [ ] post request - check user with token
       - [ ] /register - save user to db and send token
       - [ ] /login - check user and send token
@@ -69,5 +69,5 @@ Système de connexion pour Edubel.
       - password : string
       - admin : bool
       - Methods :
-        - before save hash password with jwt
+        - before save hash password with bcrypt
         - compare password
