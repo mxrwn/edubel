@@ -3,13 +3,17 @@ const mongoose = require('mongoose');
 const UsersShema = mongoose.Schema({
   email : {
     type : String,
-    min: 7,
-    max: 10,
+    required : true,
     index : {
-      unique: true
+      unique : true
     }
   },
-  password : String,
+  password : {
+    type : String,
+    required : true
+  },
+}, {
+  timestamps : true
 })
 
 const Users = mongoose.model('users', UsersShema);

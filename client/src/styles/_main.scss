@@ -1,0 +1,35 @@
+@import './fonts';
+@import './var';
+@import './form';
+
+*{
+  font-family: $text_font;
+  color : white;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+
+
+h1{
+  font-family: $logo_font;
+  font-size: $logo_size;
+  font-weight: $logo_weight;
+}
+a{
+  font-size: $link_size;
+  font-weight: $link_weight;
+  text-decoration: none;
+}
+
+body{
+  background: white;
+  overflow: hidden;
+}
+
+.welcome{
+  color: $primary_color;
+}

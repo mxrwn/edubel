@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const usersRouter = require('./routes/users');
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/edubel', {
+mongoose.connect('mongodb+srv://mxrwn:hafida01@rezistance.ddmsm.mongodb.net/edubel?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
@@ -15,10 +15,10 @@ mongoose.connect('mongodb://localhost:27017/edubel', {
 
 app.use(express.json());
 app.use(morgan('common'));
+app.use(cors())
 
-// app.use(cors({
-//   origin: 'http://www.edubel.be'
-// }))
+app.use('/users', usersRouter);
+
 
 
 app.get('/', (req, res) => {
@@ -27,7 +27,6 @@ app.get('/', (req, res) => {
   })
 })
 
-app.use('/users', usersRouter);
 
 
 app.listen(8000, () => {

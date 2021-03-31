@@ -1,6 +1,7 @@
 const express = require('express');
 const User = require('./../models/Users');
 const router = express.Router()
+const jwt = require('jsonwebtoken');
 
 
 router.get('/' , (req, res) => {
@@ -9,30 +10,56 @@ router.get('/' , (req, res) => {
   })
 })
 
-router.get('/login', (req, res) => {
-  User.find({email : 'test@gmail.com'}, (err, found) => {
+router.post('/login', (req, res) => {
+  User.findOne(req.body, (err, found) => {
     console.log(found);
     console.log(err)
-    res.send({
-      message : found
+    if(err === null && found === null){
+      res.send({
+        message : 'account does not match'
+      })
+    }else{
+      const loginToken= jwt.sign({
+        email: found.email
+      },"ramzy & marwane");
+      res.send({
+        message : loginToken
+      })
+    }
     })
-  })
+    
   
 })
 
 
-router.get('/register', async (req, res) => {
-  const user = User({email : 'test@gmail.com', password : '1234'});
-  const savedUser = await user.save();
-  res.send({
-    message : savedUser
-  })
+router.post('/register', async (req, res) => {
+  console.log(req.body)
+  const user = User(req.body);
+  await user.save((err, saved) => {
+    if(err !== null) {
+      console.log(err);
+      res.send({
+        message : 'user already exist'
+      })
+    } else{
+      const userToken= jwt.sign({
+       email: saved.email
+      },"ramzy & marwane");
+      res.send({
+        message : userToken
+      })
+    }
+  });
 })
 
 
-router.get('/decodeToken', (req, res) => {
+router.post('/decodeToken', (req, res) => {
+ const receivedToken = req.body.token;
+ const convertTokenToRead= jwt.decode(receivedToken,"ramzy & marwane");
+
+ 
   res.send({
-    message : 'logged in'
+    message : convertTokenToRead
   })
 })
 

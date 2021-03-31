@@ -26,12 +26,9 @@ Système de connexion pour Edubel.
 ## Front-End
 
 * [x] Create react app
-    * [ ] Create user class
-      - email
-      - password
-    * [ ] Loading component
-      * [ ] Check token
-        * [ ] if token valid send to profile
+  * [ ] Loading component
+    * [ ] Check token
+      * [ ] if token valid send to profile
         * [ ] if not valid send to login
     * [x] Register component
       * [x] Create form (email, password, confirm password)
@@ -61,13 +58,13 @@ Système de connexion pour Edubel.
 
     - [x] Create express app
     - [x] Create user route
-      - [ ] post request - check user with token
-      - [ ] /register - save user to db and send token
-      - [ ] /login - check user and send token
-    - [ ] Create user model
+      - [x] post request - check user with token
+      - [x] /register - save user to db and send token
+      - [x] /login - check user and send token
+    - [x] Create user model
       - email : string
       - password : string
       - admin : bool
-      - Methods :
+      - (Methods :
         - before save hash password with bcrypt
-        - compare password
+        - compare password)
